@@ -57,7 +57,7 @@ img.avatar {
 .section-presentation {
     display: flex;
     color: var(--text-secundary);
-    gap: ;
+    gap: 1rem;
 }
 
 .section-presentation div {
