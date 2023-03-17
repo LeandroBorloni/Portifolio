@@ -20,6 +20,9 @@ body {
     color: var(--text-primary);
 }
 
+
+
+/* PÁGINA INICIAL */
 header {
     display: flex;
     flex-direction: column;
@@ -78,19 +81,97 @@ span {
     box-shadow: 0 0 20px #0575E6;
 }
 
+
+
+/* APRESENTAÇÃO */
 img.avatar {
     border-radius: 50%;
 }
 
 .section-presentation {
     display: flex;
-    color: var(--text-secundary);
-    gap: 1rem;
+    color: var(--text-primary);
+    gap: 5rem;
+    background-color: #3f3f3f;
+    padding: 10rem 5rem;
 }
 
 .section-presentation div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center
+    justify-content: center;
+}
+
+p {
+    font-family: var(--font-default);
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+
+/* PROJETOS */
+#section-projects {
+    background-color: #23295C;
+    padding: 3rem;
+}
+
+#section-projects ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+#section-projects li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+}
+
+.card-image img {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 1s, bottom 1s;
+}
+
+#section-projects li:hover .card-info{
+    opacity: 1;
+    bottom: 25%;
+}
+
+h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+}
+
+h3 {
+    font-size: 5rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    margin: 2rem 10rem;
+}
+
+h4 {
+    font-size: 3rem;
+    font-family: var(--font-default);
+    font-weight: bold;
+    margin: 0 4rem;
+}
+
+#botao-projects {
+    width: 210px;
+    margin: 5rem;
 }
