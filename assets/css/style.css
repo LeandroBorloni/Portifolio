@@ -8,7 +8,7 @@
     --text-primary: #fff;
     --text-secundary: #000;
     --font-heading: 'Poppins';
-    --font-default: 'Montserrat'
+    --font-default: 'Montserrat';
 }
 
 html {
@@ -18,6 +18,7 @@ html {
 body {
     font-family: var(--font-default);
     color: var(--text-primary);
+    background-image: linear-gradient(to bottom, #232526 40% , #23295C );
 }
 
 
@@ -92,8 +93,7 @@ img.avatar {
     display: flex;
     color: var(--text-primary);
     gap: 5rem;
-    background-color: #3f3f3f;
-    padding: 10rem 5rem;
+    padding: 15rem 5rem
 }
 
 .section-presentation div {
@@ -114,15 +114,15 @@ p {
 
 /* PROJETOS */
 #section-projects {
-    background-color: #23295C;
-    padding: 3rem;
+    padding: 10rem 5rem;
 }
 
 #section-projects ul {
     display: flex;
     justify-content: space-around;
     gap: 4rem;
-    margin-top: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 #section-projects li {
@@ -174,4 +174,53 @@ h4 {
 #botao-projects {
     width: 210px;
     margin: 5rem;
+}
+
+/* ORÇAMENTO */
+#section-budget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../images/background_bugdet.svg);
+    background-size: cover;
+
+}
+
+#section-budget form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    background-color: #8C8C8C99;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    width: 80%;
+    padding: 2rem;
+}
+
+#section-budget form h4 {
+    position: absolute;
+    top: -15%;
+    background-color: #23295C;
+    padding: 1.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+
+#section-budget form output {
+    grid-column: 2;
+}
+
+label {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: var(--font-default);
+    padding: 1rem;
+}
+
+output {
+    font-size: 2rem;
+    font-family: var(--font-default);
 }
