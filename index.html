@@ -7,110 +7,117 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./assets/js/loader.js"></script>
     <title>Portifólio</title>
 </head>
 <body>
-    <nav>
-        <div id="hamburguer">
-            <div class="linha"></div>
-            <div class="linha"></div>
-            <div class="linha"></div>
-        </div>
-        <ul id="menu" class="menu-show">
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-house"></i>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-user"></i>
-                    Apresentação
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-code"></i>
-                    Projetos
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-credit-card"></i>
-                    Orçamento
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Front-End Developer</h1>
-        <span>Leandro S. Borloni</span>
-        <a class="button" href="#">Saiba mais</a>
-    </header>
-    <section class="section-presentation">
-        <img class="avatar" src="https://github.com/LeandroBorloni.png" alt="Avatar do Leandro Borloni">
-        <div>
-            <h1>Web Developer & Mobile</h1>
-            <p>Procuro atuar na área de desenvolvimento, 
-                mais especificamente Front-End com foco em Web e Mobile.</p>
-            <a class="button" href="#projetos">Ver projetos</a>
-        </div>
-    </section>
-    <section id="section-projects">
-        <h2 id="projetos">Projetos</h2>
-        <ul>
-            <li>
-                <div class="card-image">
-                    <img src="./assets/images/Projeto1.svg" alt="">
-                </div>
-                <div class="card-info">
-                    <h3>SCC</h3>
-                    <h4>HTML, CSS, JS</h4>
-                    <a id="botao-projects" class="button" href="">Saiba mais</a>
-                </div>
-            </li>
-            <li>
-                <div class="card-image">
-                    <img src="./assets/images/Projeto2.svg" alt="">
-                </div>
-                <div class="card-info">
-                    <h3></h3>
-                    <h4></h4>
-                    <a id="botao-projects" class="button" href=""></a>
-                </div>
-            </li>
-            <li>
-                <div class="card-image">
-                    <img src="./assets/images/Projeto3.svg" alt="">
-                </div>
-                <div class="card-info">
-                    <h3></h3>
-                    <h4></h4>
-                    <a id="botao-projects" class="button" href=""></a>
-                </div>
-            </li>
-        </ul>
-    </section>
-    <section id="section-budget">
-        <form action="#">
-            <h4>Orçamento</h4>
-            <label for="qtde">Qtde de páginas</label>
-            <input type="number" id="qtde" placeholder="Digite a qtde" value="1">
-            <label for="js">Precisa de JS?</label>
-            <input type="checkbox" id="js">
-            <label for="layout">Precisa de layout?</label>
-            <div>
-                <input type="radio" id="layout-sim" name="layout">
-                <label for="layout-sim">Sim,preciso</label>
-                <input type="radio" id="layout-nao" name="layout">
-                <label for="layout-nao">Não, já tenho</label>
+    <div class="loader">
+        <div class="spin"></div>
+    </div>
+    <main class="hide">
+        <nav>
+            <div id="hamburguer">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
             </div>
-            <label for="prazo">Prazo</label>
-            <input type="range" id="prazo" min="1" max="10" value="1">
-            <output id="preco">R$ 195,00</output>
-        </form>
-    </section>
+            <ul id="menu">
+                <li>
+                    <a href="#home">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#apresentacao">
+                        <i class="fa-solid fa-user"></i>
+                        Apresentação
+                    </a>
+                </li>
+                <li>
+                    <a href="#projetos">
+                        <i class="fa-solid fa-code"></i>
+                        Projetos
+                    </a>
+                </li>
+                <li>
+                    <a href="#orcamento">
+                        <i class="fa-solid fa-credit-card"></i>
+                        Orçamento
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <header id="home">
+            <h1>Developer</h1>
+            <span>Leandro S. Borloni</span>
+            <a class="button" href="#">Saiba mais</a>
+        </header>
+        <section class="section-presentation" id="apresentacao">
+            <img class="avatar large-only" src="https://github.com/LeandroBorloni.png" alt="Avatar do Leandro Borloni">
+            <div>
+                <h1>Desenvolvedor Front & Back-end</h1>
+                <p>Procuro atuar na área de desenvolvimento, 
+                    com Front-End com foco em Web e Mobile ou na área de Back-End
+                    com a linguagem Python, atualmente estou me especializando nelas e tenho muita vontade para progredir nesta carreira.</p>
+                <a class="button" href="#projetos">Ver projetos</a>
+            </div>
+        </section>
+        <section id="section-projects">
+            <h2 id="projetos">Projetos</h2>
+            <ul>
+                <li>
+                    <div class="card-image">
+                        <img src="./assets/images/Projeto1.svg" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h3>SCC</h3>
+                        <h4>HTML, CSS, JS</h4>
+                        <a id="botao-projects" class="button" href="https://github.com/LeandroBorloni/Projeto-SCC">Saiba mais</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card-image">
+                        <img src="./assets/images/Projeto2.svg" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h3></h3>
+                        <h4></h4>
+                        <a id="botao-projects" class="button" href="https://github.com/LeandroBorloni?tab=repositories">Saiba mais</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="card-image">
+                        <img src="./assets/images/Projeto3.svg" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h3></h3>
+                        <h4></h4>
+                        <a id="botao-projects" class="button" href="https://github.com/LeandroBorloni?tab=repositories">Saiba mais</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="section-budget">
+            <form action="#" id="orcamento">
+                <h4>Orçamento</h4>
+                <label for="qtde">Qtde de páginas</label>
+                <input type="number" id="qtde" placeholder="Digite a qtde" value="1">
+                <label for="js">Precisa de JS?</label>
+                <input type="checkbox" id="js">
+                <label for="layout">Precisa de layout?</label>
+                <div>
+                    <input type="radio" id="layout-sim" name="layout">
+                    <label for="layout-sim">Sim,preciso</label>
+                    <input type="radio" id="layout-nao" name="layout">
+                    <label for="layout-nao">Não, já tenho</label>
+                </div>
+                <label for="prazo">Prazo</label>
+                <input type="range" id="prazo" min="1" max="10" value="1">
+                <output id="preco">R$ 195,00</output>
+            </form>
+        </section>
+    </main>
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/menu.js"></script>

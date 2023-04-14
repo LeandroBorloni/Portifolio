@@ -13,6 +13,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,6 +25,37 @@ body {
 
 
 /* PÁGINA INICIAL */
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.spin {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 16px solid #999;
+    border-top: 16px solid #6a3093;
+    animation: spin 1.5s linear infinite;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 #hamburguer {
     display: flex;
     justify-content: space-between;
@@ -53,7 +85,7 @@ nav ul {
     gap: 1rem;
     position: fixed;
     right: -20rem;
-    background-color: #fff;
+    background-color: #999;
     height: 100vh;
     width: 20rem;
     z-index: 10;
@@ -112,7 +144,7 @@ header::before {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 7rem);
     font-weight: 900;
     font-family: var(--font-heading);
 }
@@ -276,4 +308,14 @@ label {
 output {
     font-size: 2rem;
     font-family: var(--font-default);
+}
+
+@media (max-width: 980px) {
+    #section-projects ul{
+        flex-direction: column;
+    }
+
+    .large-only{
+        display: none;
+    }
 }
